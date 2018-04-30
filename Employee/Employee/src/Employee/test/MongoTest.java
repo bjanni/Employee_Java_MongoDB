@@ -3,7 +3,7 @@ package com.employee.test;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.employee.domain.Tree;
+import com.employee.domain.Employee;
 import com.employee.repository.EmployeeRepositoryImpl;
 import com.employee.repository.Repository;
 
@@ -32,7 +32,7 @@ public class MongoTest {
 
 		System.out.println("Employee with id 1" + repository.getEmployee("1"));
 
-		repository.updateTree("1", "Danie");
+		repository.updateEmployee("1", "Danie");
 
 		System.out.println("3. " + repository.getAllEmployee());
 
