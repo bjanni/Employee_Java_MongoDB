@@ -43,7 +43,7 @@ public class EmployeeRepositoryImpl implements Repository {
 	/**
 	 * Updates a {@link Employee} name for a particular id.
 	 */
-	public WriteResult updateTree(String id, String name) {
+	public WriteResult updateEmployee(String id, String name) {
 		return mongoTemplate.updateFirst(
 				new Query(Criteria.where("id").is(id)),
 				Update.update("name", name), Employee.class);
